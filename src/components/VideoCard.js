@@ -23,4 +23,14 @@ const VideoCard = ({ info }) => {
   );
 };
 
+
+// Higher Order Component
+export const HOC = ({ info }) => {
+  return (
+    <div className="p-1 m-1 border-teal-900 bg-pink-300 rounded-lg">
+      <VideoCard info={info}/>
+    </div>
+  );
+};
+
 export default VideoCard;
