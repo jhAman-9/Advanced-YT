@@ -34,7 +34,7 @@ const Header = () => {
     const res = await fetch(YOUTUBE_SEARCH_SEGGESTION + searchQuery);
     const data = await res.json();
     setSearhQuerySuggestion(data[1]);
-    
+
     dispatch(
       cacheResults({
         [searchQuery]: data[1],

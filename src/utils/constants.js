@@ -6,3 +6,10 @@ export const YOUTUBE_VIEDOS_API =
 
 export const YOUTUBE_SEARCH_SEGGESTION =
   "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+
+export const IMG_LOGO =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRABGD5o9Iba5FaOmeKhcu5GLCeB5o53Lw1gAfGNzcLrLdlBOAnUvmkGIjQU6LzcYM-qwQ&usqp=CAU";
+
+
+export const messageSize = 20;
+export const reduxChatMessageSize = 20;

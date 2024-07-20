@@ -1,11 +1,12 @@
 import React from 'react'
 import { commentsData } from '../utils/helper';
+import { IMG_LOGO } from '../utils/constants';
 
 const Comments = ({ data }) => {
   const { name, text } = data;
   return (
     <div className="flex shadow-md bg-gray-100 rounded-lg py-2 cursor-pointer hover:bg-gray-300 ">
-      <img alt='profile-logo' className='w-10 h-10 m-1' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRABGD5o9Iba5FaOmeKhcu5GLCeB5o53Lw1gAfGNzcLrLdlBOAnUvmkGIjQU6LzcYM-qwQ&usqp=CAU" />
+      <img alt='profile-logo' className='w-10 h-10 m-1' src={IMG_LOGO} />
       <div className=" ml-2">
         <p className="font-bold">{name}</p>
         <p>{text}</p>
