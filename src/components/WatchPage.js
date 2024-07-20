@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { closeSideBar } from '../store/userSlice';
 import { useSearchParams } from 'react-router-dom';
+import CommentsContainer from './CommentsContainer';
 
 const WatchPage = () => {
     const dispatch = useDispatch();
@@ -17,17 +18,19 @@ const WatchPage = () => {
     const videoId = param.get('v')
 
   return (
-    <div className="px-20 py-3">
-      <iframe
-        width="1000"
-        height="500"
-        src={"https://www.youtube.com/embed/" + videoId}
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
+    <div className='flex flex-col mx-3'>
+      <div className="px-5">
+        <iframe
+          width="1000"
+          height="500"
+          src={"https://www.youtube.com/embed/" + videoId}
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+      </div>
+      <CommentsContainer/>
     </div>
   );
 }

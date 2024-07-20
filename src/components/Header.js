@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleSideBar } from "../store/userSlice";
 import { YOUTUBE_SEARCH_SEGGESTION } from "../utils/constants";
 import { cacheResults } from "../store/searchSlice";
-import { json } from "react-router-dom";
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -77,10 +76,10 @@ const Header = () => {
         {showSuggestion && (
           <div className="mt-1">
             <ul className="fixed w-[37rem] bg-white text-black rounded-lg shadow-lg">
-              {searchQuerySuggestion?.map((suggestion, index) => (
+              {searchQuerySuggestion?.map((suggestion) => (
                 <li
                   className="p-2 rounded-lg hover:bg-gray-100 flex"
-                  key={index}
+                  key={suggestion}
                 >
                   <FaSearch className="m-1" /> {suggestion}
                 </li>
